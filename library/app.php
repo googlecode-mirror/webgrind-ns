@@ -10,7 +10,7 @@
  *  WebGrind-Ns is rewritten from scratch by me, Suwandi Tan 
  *  from Indonesia for Chilik Framework
  *
- *  Copyright (C) 2011  Suwandi Tan
+ *  Copyright (C) 2011  Suwandi Tan (swndtan [at] gmail [dot] com)
  *
  *  WebGrind-Ns is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
