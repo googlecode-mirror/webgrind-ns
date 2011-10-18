@@ -24,26 +24,6 @@ class IOReadWebGrind
             if($typ === 'fl=') { $function = $this->doFl($fp, $line); }
             else if($typ === 'cfn=') { $this->doFn($fp, $line, $function); }
             else if(strpos($line,': ')!==false) { $this->doDef($line); }
-            
-            /*
-            switch($typ)
-            {
-                case 'fl='  :
-                    $function = $this->doFl($fp, $line);
-                    break;
-                    
-                case 'cfn=' :
-                    $this->doFn($fp, $line, $function);
-                    break;
-                    
-                default:
-                    $this->doDef($line);
-                    break;
-                    
-            }
-            
-            unset($line);
-            */
         }
         
         fclose($fp);
