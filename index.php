@@ -1,17 +1,4 @@
 <?php
-    /*
-    include_once 'config.php';
-
-    include_once 'library/app.php';
-    include_once 'library/filehandler.php';
-
-    include_once 'library/sizer/interface/fs.php';
-    include_once 'library/sizer/sizer.php';
-
-    include_once 'library/entity/ioreadwebgrind.php';
-    include_once 'library/entity/wgreader.php';
-    */
-    
     include_once 'webgrind.config.php';
 
     include_once 'library/webgrind.app.php';
