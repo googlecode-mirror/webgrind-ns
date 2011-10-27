@@ -1,6 +1,6 @@
 <?php
 
-namespace WebGrind\Entity;
+namespace Entity;
 
 class IOWrite
 {

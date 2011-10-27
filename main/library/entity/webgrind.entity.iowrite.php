@@ -2,7 +2,7 @@
 
 namespace WebGrind\Entity;
 
-class IOWriteWebGrind implements WGFileSpec
+class IOWrite implements WGFileSpec
 {
     function process($data, $file, $mode = 'wb')
     {
