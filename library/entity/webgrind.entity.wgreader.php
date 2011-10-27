@@ -1,7 +1,7 @@
 <?php
 
 namespace WebGrind\Entity;
-use \WebGrind as WG;
+use \WebGrind as WG, \Entity;
 
 class WGReader
 {
@@ -20,12 +20,12 @@ class WGReader
     {
         if($this->cache)
         {
-            $read = new IORead;
+            $read = new Entity\IORead;
             $result = unserialize($read->process('',$this->file.'.serial','rb'));
         }
         else
         {
-            $read = new IOReadWebGrind;
+            $read = new IORead;
             $result = $read->process('', $this->file, 'rb');
         }
         

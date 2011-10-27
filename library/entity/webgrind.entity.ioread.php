@@ -2,7 +2,7 @@
 
 namespace WebGrind\Entity;
 
-class IOReadWebGrind 
+class IORead
 {
     const ENTRY_POINT   = '{main}';
     

@@ -2,7 +2,7 @@
 
 namespace WebGrind\Entity;
 
-interface WGFileSpec
+interface FileSpec
 {
     const WG_VERSION    = '6';
 

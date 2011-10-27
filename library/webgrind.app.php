@@ -1,32 +1,5 @@
 <?php
 
-/*
- *  This is a source written from scratch with look and feel still 
- *  like the Original author: Joakim Nygård and Jacob Oettinger.
- *
- *  This Web Application depends on PHP Extension, xDebug, 
- *  source written by: Derick Rethans. 
- *
- *  WebGrind-Ns is rewritten from scratch by me, Suwandi Tan 
- *  from Indonesia for Chilik Framework
- *
- *  Copyright (C) 2011  Suwandi Tan (swndtan [at] gmail [dot] com)
- *
- *  WebGrind-Ns is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  WebGrind-Ns is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
- 
 namespace WebGrind;
 use WebGrind\Entity as WGEntity;
 
@@ -43,13 +16,13 @@ class App
     public static function start()
     {
         if(version_compare(PHP_VERSION, '5.3', '<')) throw new Exception('WebGrind-Ns needs PHP version 5.3 or greater. Current version of your PHP is: '.PHP_VERSION);
-        
         if (ini_get('date.timezone') == '') date_default_timezone_set( Config::$defaultTimezone );
         
         self::$start    = microtime(TRUE);
         self::$mem      = memory_get_peak_usage();
         
         ob_start();
+        //echo "<pre>";
     }
     
     public static function run()
@@ -88,7 +61,9 @@ class App
         self::$finish       = round((microtime(TRUE) - self::$start), 5);
         self::$endmem       = (memory_get_peak_usage() - self::$mem) / 1024;
         
+        //echo "\nElapsed: ", self::$finish, " ms     Memory Used: ", self::$endmem," KB\n";
         ob_end_flush();
+        //echo "</pre>";
     }
     
     private static function doFileList()

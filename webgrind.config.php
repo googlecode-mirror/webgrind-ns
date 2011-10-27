@@ -7,8 +7,8 @@ class Config
     static $checkVersion                    = TRUE;
 	static $hideWebgrindProfiles            = FALSE;
 	
-	static $storageDir                      = '/your/webgrind/data/here';
-	static $profilerDir                     = '/your/xdebug/data/here';
+	static $storageDir                      = '/var/www/Labs/chilikcms/libs/webgrind/data';
+	static $profilerDir                     = '/var/www/Labs/chilikcms/libs/webgrind/data';
 	
 	static $preprocessedSuffix              = '.webgrind';
 	

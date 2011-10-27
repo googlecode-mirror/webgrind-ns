@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Entity;
 use \Base;
 
@@ -10,7 +9,7 @@ class Sizer implements Base\FS
     
     private static $version = '1.1';
     
-    public function info($size, $format = NULL)
+    public static function info($size, $format = NULL)
     {
         $sizes = array(
                         self::BYTE, 
@@ -37,9 +36,11 @@ class Sizer implements Base\FS
 	    return sprintf($format, $size, $sizes[$index]);
     }
     
+    /*
     function __invoke()
     {
         $args = func_get_args();
         return $this->info($args[0]);
     }
+    */
 }
